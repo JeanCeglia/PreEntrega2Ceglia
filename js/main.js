@@ -20,6 +20,8 @@ search.addEventListener("click", (e) => {
   e.preventDefault();
 
   let selectOpt = prov.options[prov.selectedIndex];
+
+  /* Creando modal desde js usando bootstrap */
   let modal = document.createElement("div");
   modal.className = "modal";
   document.body.appendChild(modal);
@@ -69,7 +71,7 @@ search.addEventListener("click", (e) => {
     modalBody.appendChild(verButton);
 
 
-    /* Evento mostrar todas las ciudades disponibles */
+    /* Evento mostrar todas las ciudades disponibles - en este punto aclaro que tengo que replicarlo para las demas ciudades pero por falta de tiempo, lo muestro con cordoba que es la que tiene mas ciudades */
     verButton.addEventListener('click', () => {
         let verCiudades = '';
         if(selectOpt.value === 'Cordoba'){  
@@ -117,5 +119,7 @@ search.addEventListener("click", (e) => {
 /* Esta es una seccion de mi proyecto, en el cual lo que busco es tener un buscador interactivo de todos los lugares donde tenemos un lugar de atencion
 
 como es obvio, le falta mucho, pero para no alargar la entrega, lo subo con puntos que, hasta donde entiendo, cumple las consignas
+
+Como ultima aclaración, espero se entienda que cuando encuentre la ciudad especifica, me muestre los puntos de atención que se encuentran en esa ciudad. 
 
 */
